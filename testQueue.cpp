@@ -12,14 +12,17 @@ int main()
 	int numberInputs;
 	cout << "How many ints would you like to put into the array?\n";
 	cin >> numberInputs;
-
+	cout << endl;
 	ArrayQueue aq(size);
+	cout << "Made the Queue\n";
 	try
 	{
+		cout << "Inserting into the Queue\n";
 		for(int i = 0; i <numberInputs; i++ )
 		{
 			aq.enqueue(i);
 		}
+		cout << "Outputting the Queue\n";
 		if( numberInputs > size)
 		{
 			while(1)
@@ -34,6 +37,7 @@ int main()
 				cout << aq.dequeue() << endl;
 			}
 		}
+		cout << "All is good in the neighborhood\n";
 	}
 	catch(ArrayQueueFull f)
 	{
